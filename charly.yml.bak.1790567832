@@ -1,5 +1,7 @@
+version: 2026.232.0520
 google-cloud-npm:
     candy:
+        version: 2026.243.0100
         description: |
             Installs the Firebase CLI globally via npm so `firebase` is on PATH.
             The candy depends on google-cloud + nodejs and ships a package.json
@@ -30,6 +32,7 @@ google-cloud-npm:
               stdout:
                 - matches: "[0-9]+\\.[0-9]+"
               command: ${HOME}/.npm-global/bin/firebase --version
+
 google-cloud-npm-skill:
     skill:
         name: google-cloud-npm
@@ -40,47 +43,47 @@ google-cloud-npm-skill:
             Use when working with Firebase or GCP Node.js tooling.
         content: |-
             # google-cloud-npm -- GCP npm packages
-
+            
             ## Candy Properties
-
+            
             | Property | Value |
             |----------|-------|
             | Dependencies | `google-cloud`, `nodejs`, `gemini` |
             | Install files | `package.json` |
-
+            
             ## Packages
-
+            
             - `firebase-tools` (npm) -- Firebase CLI
-
+            
             ## Usage
-
+            
             ```yaml
             # charly.yml
             my-image:
               candy:
                 - google-cloud-npm
             ```
-
+            
             ## Used In Boxes
-
+            
             Not currently used in any enabled boxes. Depends on `google-cloud` + `nodejs`; the
             Gemini CLI is provided by the `gemini` candy (which pins `@google/gemini-cli`), so a
             composing box that also composes `gemini` keeps its pinned version.
-
+            
             ## Related Candies
-
+            
             - `/charly-coder:google-cloud` -- Google Cloud SDK dependency
             - `/charly-coder:nodejs` -- Node.js runtime dependency
             - `/charly-coder:gemini` -- the Gemini CLI (pinned `@google/gemini-cli`)
-
+            
             ## When to Use This Skill
-
+            
             Use when the user asks about:
-
+            
             - Firebase CLI tools or deployment
             - GCP npm packages
-
+            
             ## Author + Test References
-
+            
             - `/charly-image:layer` — candy authoring reference (tasks, vars, env_provide, tests block syntax)
             - `/charly-check:check` — declarative testing framework for the `check:` block
