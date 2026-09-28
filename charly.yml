@@ -1,7 +1,5 @@
-version: 2026.232.0520
 google-cloud-npm:
     candy:
-        version: 2026.243.0100
         description: |
             Installs the Firebase CLI globally via npm so `firebase` is on PATH.
             The candy depends on google-cloud + nodejs and ships a package.json
