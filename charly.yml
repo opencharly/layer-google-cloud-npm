@@ -13,9 +13,9 @@ google-cloud-npm:
             so a composing box that also composes `gemini` never has its pinned
             version overwritten by a `*` install.
         require:
-            - '@github.com/opencharly/layer-google-cloud:v2026.241.0656'
-            - '@github.com/opencharly/layer-nodejs:v2026.239.1624'
-            - '@github.com/opencharly/layer-gemini:v2026.243.0409'
+            - '@github.com/opencharly/layer-google-cloud:v2026.272.0132'
+            - '@github.com/opencharly/layer-nodejs:v2026.272.0322'
+            - '@github.com/opencharly/layer-gemini:v2026.273.1821'
         plan:
             - check: the firebase binary is installed into the npm global bin directory
               file:
